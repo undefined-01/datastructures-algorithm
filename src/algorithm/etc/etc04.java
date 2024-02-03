@@ -63,4 +63,24 @@ public class etc04 {
         return strArr;
     }
 
+    public ArrayList<String> solution3(String[] strArr) {
+        ArrayList<String> answer = new ArrayList<>();
+
+        for(String str : strArr) {
+            char[] s = str.toCharArray();
+            int lt = 0;
+            int rt = s.length - 1;
+
+            while(lt < rt) {
+                char temp = s[lt];
+                s[lt] = s[rt];
+                s[rt] = temp;
+                lt++;
+                rt++;
+            }
+        }
+
+        return answer;
+    }
+
 }
